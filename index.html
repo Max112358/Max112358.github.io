@@ -3,45 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Max Johnson - Portfolio</title>
+    <title>Max Johnson - Software Developer Portfolio</title>
     <style>
+      /* General Reset and Base Styles */
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
         margin: 0;
         padding: 0;
+        background-color: #f4f7f6; /* Light gray background */
+        color: #333;
       }
+
+      /* Header and Navigation */
       header {
-        background: #333;
-        color: #fff;
+        background: #2c3e50; /* Dark blue/charcoal header */
+        color: #ecf0f1; /* Light text */
+        padding: 3rem 0;
         text-align: center;
-        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+      header p {
+        margin: 0.5rem 0 0;
+        font-size: 1.2em;
+        color: #bdc3c7; /* Slightly lighter gray for tagline */
+      }
+
       nav {
-        background: #444;
-        color: #fff;
+        background: #34495e; /* Slightly lighter dark blue for nav */
         text-align: center;
-        padding: 0.5rem;
+        padding: 0.75rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       }
       nav a {
-        color: #fff;
+        color: #ecf0f1;
         text-decoration: none;
-        padding: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        display: inline-block;
+        transition: background-color 0.3s, color 0.3s;
+        font-weight: bold;
+      }
+      nav a:hover {
+        background-color: #e67e22; /* Vibrant orange hover */
+        color: #fff;
+      }
+
+      /* Section Styling */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 2rem;
       }
       section {
-        padding: 2rem;
+        padding: 4rem 0;
+      }
+      section h2 {
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2em;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+      section h2::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: #e67e22;
+        margin: 10px auto 0;
+      }
+
+      /* About Section */
+      #about img {
+        display: block;
+        margin: 0 auto 1.5rem;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      #about p {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.1em;
+        color: #555;
+      }
+
+      /* Projects Section */
+      #projects .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
       }
       .project {
-        margin-bottom: 1rem;
-        border-left: 3px solid #333;
-        padding-left: 1rem;
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+        border-top: 5px solid #e67e22;
+      }
+      .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+      .project h3 {
+        color: #2c3e50;
+        margin-top: 0;
+        font-size: 1.25em;
+      }
+      .project p {
+        font-size: 0.95em;
+        color: #777;
+      }
+
+      /* Resume Section */
+      #resume h3 {
+        color: #e67e22;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
+      }
+      #resume ul {
+        list-style: none;
+        padding: 0;
+      }
+      #resume ul li {
+        background: #fff;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-left: 5px solid #2c3e50;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+      }
+      #resume a {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 10px 20px;
+        background: #e67e22;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+        font-weight: bold;
+      }
+      #resume a:hover {
+        background: #d35400;
+      }
+
+      /* Contact Section */
+      #contact {
+        text-align: center;
+      }
+      #contact p {
+        font-size: 1.1em;
+        margin: 0.75rem 0;
+      }
+      #contact a {
+        color: #e67e22;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      #contact a:hover {
+        color: #d35400;
+      }
+
+      /* Footer */
+      footer {
+        background: #333;
+        color: #bdc3c7;
+        text-align: center;
+        padding: 1.5rem 0;
+        margin-top: 3rem;
+        font-size: 0.9em;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Max Johnson</h1>
-      <p>Pursuing a career in software development</p>
+      [cite_start]
+      <h1>Max Johnson [cite: 1]</h1>
+      [cite_start]
+      <p>Pursuing a career in software development [cite: 2]</p>
     </header>
 
     <nav>
@@ -52,139 +205,188 @@
     </nav>
 
     <section id="about">
-      <h2>About Me</h2>
-      <img
-        src="images/profile_pic.jpg"
-        alt="Max Johnson"
-        style="width: 200px; border-radius: 50%"
-      />
-      <p>
-        Hello! I am pursuing a career in software development. I specialize in
-        simulation and artificial intelligence, with a strong foundation in a
-        variety of programming languages and industrial technology.
-      </p>
+      <div class="container">
+        <h2>About Me</h2>
+        <img
+          src="images/profile_pic.jpg"
+          alt="Max Johnson"
+          style="width: 180px; border-radius: 50%"
+        />
+        <p>
+          Hello! [cite_start]I am pursuing a career in software
+          development[cite: 2]. [cite_start]I am graduating with a B.S. in
+          Computer Science, specializing in simulation and artificial
+          intelligence[cite: 20, 21]. [cite_start]I have a strong foundation in
+          diverse programming languages and experience in both academic tutoring
+          and industrial technology[cite: 13, 15, 7].
+        </p>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>AI Age Detection - Deep Learning Model [cite: 29, 30]</h3>
-        <p>
-          A deep learning AI model trained to recognize age from
-          photographs[cite: 31]. It was trained on the IMDB-WIKI dataset [cite:
-          31] and uses tensorflow keras to run prediction on a given set of
-          images[cite: 32].
-        </p>
-      </div>
-      <div class="project">
-        <h3>Conniption.xyz - Image Board Website [cite: 33]</h3>
-        <p>
-          A fully working image board where users can create or reply to
-          threads, and post videos and images[cite: 35, 36]. Built as an
-          experiment in "vibe coding"[cite: 34].
-        </p>
-      </div>
-      <div class="project">
-        <h3>Video Game Mod - Blueprints [cite: 40, 41]</h3>
-        <p>
-          A mod for the video game Barotrauma that lets users save and load
-          circuit blueprints[cite: 42]. It works with the legacy Barotrauma code
-          using a C# to Lua interconnect[cite: 43]. It has over 3,000
-          users[cite: 43].
-        </p>
-      </div>
-      <div class="project">
-        <h3>VR Diagnostic Tool - VR simulation [cite: 48]</h3>
-        <p>
-          A Unity game used by the psychology department of Fresno State [cite:
-          51] to diagnose ADHD in children[cite: 49]. It uses greenscreens to
-          render a realistic classroom over the real world, and timed
-          distractors are measured using eye tracking[cite: 49, 50].
-        </p>
-      </div>
-      <div class="project">
-        <h3>BeatBox - Automatic Youtube Music Videos [cite: 52]</h3>
-        <p>
-          A modification of the video game Midi Playground used to make YouTube
-          shorts automatically[cite: 53]. Input a Midi file and run the program
-          to make a fully animated and synchronized video with one click[cite:
-          54].
-        </p>
-      </div>
-      <div class="project">
-        <h3>Macro Recorder - AutoHotKey Script [cite: 45]</h3>
-        <p>
-          An AutoHotKey script that can record mouse and keyboard commands and
-          replay them[cite: 46]. It can also export AHK scripts of the
-          recording[cite: 47].
-        </p>
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="project">
+            [cite_start]
+            <h3>AI Age Detection - Deep Learning Model [cite: 29]</h3>
+            [cite_start]
+            <p>
+              A deep learning AI model trained to recognize age from
+              photographs[cite: 30, 31]. [cite_start]Trained on the IMDB-WIKI
+              dataset, it uses tensorflow keras to run prediction on a given set
+              of images[cite: 31, 32].
+            </p>
+          </div>
+          <div class="project">
+            [cite_start]
+            <h3>Conniption.xyz - Image Board Website [cite: 33]</h3>
+            [cite_start]
+            <p>
+              A fully working image board where users can create or reply to
+              threads, and post videos and images[cite: 35, 36].
+              [cite_start]Built as an experiment in "vibe coding"[cite: 34].
+            </p>
+          </div>
+          <div class="project">
+            [cite_start]
+            <h3>Video Game Mod - Blueprints [cite: 40, 41]</h3>
+            [cite_start]
+            <p>
+              A mod for the video game *Barotrauma* that lets users save and
+              load circuit blueprints[cite: 42]. [cite_start]It works using a C#
+              to Lua interconnect and has garnered over 3,000 users[cite: 43].
+            </p>
+          </div>
+          <div class="project">
+            [cite_start]
+            <h3>VR Diagnostic Tool - VR Simulation [cite: 48]</h3>
+            [cite_start]
+            <p>
+              A Unity game used by the psychology department of Fresno State to
+              diagnose ADHD in children[cite: 49, 51]. [cite_start]It uses
+              greenscreens and eye tracking to measure responses to timed
+              distractors[cite: 49, 50].
+            </p>
+          </div>
+          <div class="project">
+            [cite_start]
+            <h3>BeatBox - Automatic YouTube Music Videos [cite: 52]</h3>
+            [cite_start]
+            <p>
+              A modification of the video game *Midi Playground* used to
+              automatically create YouTube shorts[cite: 53]. [cite_start]Input a
+              Midi file and the program generates a fully animated and
+              synchronized video with one click[cite: 54].
+            </p>
+          </div>
+          <div class="project">
+            [cite_start]
+            <h3>Macro Recorder - AutoHotKey Script [cite: 45]</h3>
+            [cite_start]
+            <p>
+              An AutoHotKey script that can record and replay mouse and keyboard
+              commands[cite: 46]. [cite_start]It can also export AHK scripts of
+              the recording[cite: 47].
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="resume">
-      <h2>Resume</h2>
-      <h3>Experience</h3>
-      <ul>
-        <li>
-          **Computer Science Tutor**, Fresno City College, Fresno (August 2022 -
-          Present) [cite: 6, 7]: Provided instruction in computer science to
-          students[cite: 8].
-        </li>
-        <li>
-          **Assembly Technician**, Maxco Supply, Parlier (February 2020 - August
-          2022) [cite: 9, 10]: Built box forming machinery, programmed PLCs, and
-          performed general electrical diagnostic and repair[cite: 11].
-        </li>
-      </ul>
-      <h3>Education</h3>
-      <ul>
-        <li>
-          **B.S. in Computer Science**, Fresno State University, Fresno
-          (Graduated 2024) [cite: 20]: Specialized in simulation and artificial
-          intelligence.
-        </li>
-        <li>
-          **A.S. in Mechatronics**, Clovis Community College, Clovis (August
-          2019 - August 2021) [cite: 22]: Focused on PLC programming and
-          industrial technology[cite: 23].
-        </li>
-      </ul>
-      <h3>Skills</h3>
-      <ul>
-        <li>
-          **Languages**: C++, C#, Javascript, Python, Lua [cite: 13], Native
-          English [cite: 25], Some Spanish[cite: 26].
-        </li>
-        <li>
-          **Development**: React, Bootstrap, PostgreSQL [cite: 18], Unity,
-          Godot[cite: 16].
-        </li>
-        <li>
-          **Concepts**: Artificial Intelligence, Machine Learning[cite: 17].
-        </li>
-        <li>
-          **Technical**: Electronics [cite: 14], Industrial Technology
-          (PLCs)[cite: 15].
-        </li>
-      </ul>
-      <a href="Resume.pdf" target="_blank">Download Full Resume (PDF)</a>
+      <div class="container">
+        <h2>Resume Details</h2>
+
+        [cite_start]
+        <h3>Experience [cite: 5]</h3>
+        <ul>
+          [cite_start]
+          <li>
+            **Computer Science Tutor**, Fresno City College, Fresno (August 2022
+            - Present) [cite: 6, 7][cite_start]: Provided instruction in
+            computer science to students[cite: 8].
+          </li>
+          [cite_start]
+          <li>
+            **Assembly Technician**, Maxco Supply, Parlier (February 2020 -
+            August 2022) [cite: 9, 10][cite_start]: Built box forming machinery,
+            programmed PLCs, and performed general electrical diagnostic and
+            repair[cite: 11].
+          </li>
+        </ul>
+
+        [cite_start]
+        <h3>Education [cite: 19]</h3>
+        <ul>
+          [cite_start]
+          <li>
+            **B.S. in Computer Science**, Fresno State University, Fresno
+            (Graduated 2024) [cite: 20][cite_start]: Specialized in simulation
+            and artificial intelligence[cite: 21].
+          </li>
+          [cite_start]
+          <li>
+            **A.S. in Mechatronics**, Clovis Community College, Clovis (August
+            2019 - August 2021) [cite: 22][cite_start]: Focused on PLC
+            programming and industrial technology[cite: 23].
+          </li>
+        </ul>
+
+        [cite_start]
+        <h3>Skills [cite: 12]</h3>
+        <ul>
+          [cite_start]
+          <li>
+            **Programming Languages**: C++, C#, Javascript, Python, Lua[cite:
+            13].
+          </li>
+          [cite_start]
+          <li>
+            **Frameworks/Engines**: React, Bootstrap, PostgreSQL, Unity,
+            Godot[cite: 18, 16].
+          </li>
+          [cite_start]
+          <li>
+            **Concepts**: Artificial Intelligence, Machine Learning[cite: 17].
+          </li>
+          [cite_start]
+          <li>
+            **Technical**: Electronics, Industrial Technology (PLCs)[cite: 14,
+            15].
+          </li>
+        </ul>
+
+        <a href="Resume.pdf" target="_blank">Download Full Resume (PDF)</a>
+      </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: maxjohnson87@protonmail.com [cite: 4]</p>
-      <p>Phone: (559) 765-5207 [cite: 4]</p>
-      <p>
-        GitHub:
-        <a href="https://github.com/Max112358" target="_blank"
-          >https://github.com/Max112358</a
-        >
-        [cite: 38]
-      </p>
+      <div class="container">
+        <h2>Contact</h2>
+        [cite_start]
+        <p>
+          Email:
+          <a href="mailto:maxjohnson87@protonmail.com"
+            >maxjohnson87@protonmail.com</a
+          >
+          [cite: 4]
+        </p>
+        [cite_start]
+        <p>Phone: (559) 765-5207 [cite: 4]</p>
+        [cite_start]
+        <p>
+          GitHub:
+          <a href="https://github.com/Max112358" target="_blank"
+            >https://github.com/Max112358</a
+          >
+          [cite: 38]
+        </p>
+      </div>
     </section>
 
     <footer>
-      <p>&copy; 2024 Max Johnson. All rights reserved.</p>
+      <p>&copy; [cite_start]2024 Max Johnson[cite: 1]. All rights reserved.</p>
     </footer>
   </body>
 </html>
