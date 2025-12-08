@@ -11,48 +11,54 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background-color: #121212; /* Very dark background */
-        color: #e0e0e0; /* Light text */
+        background-color: #0a0a0a; /* Deep black background */
+        color: #e0e0e0; /* Light gray text for contrast */
       }
 
       /* Header and Navigation */
       header {
-        background: #1f1f1f; /* Darker header */
-        color: #ffffff; /* White text */
+        background: #121212; /* Slightly lighter black for header */
+        color: #ffffff;
         padding: 3rem 0;
         text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        border-bottom: 2px solid #1e88e5; /* Blue border accent */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
       }
       header h1 {
         margin: 0;
         font-size: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
       }
       header p {
         margin: 0.5rem 0 0;
         font-size: 1.2em;
-        color: #bdbdbd; /* Gray for tagline */
+        color: #90caf9; /* Light blue for tagline */
       }
 
       nav {
-        background: #2a2a2a; /* Slightly lighter dark for nav */
+        background: #000000; /* Pure black for nav */
         text-align: center;
         padding: 0.75rem 0;
         position: sticky;
         top: 0;
         z-index: 1000;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid #333;
       }
       nav a {
-        color: #ffffff;
+        color: #e0e0e0;
         text-decoration: none;
         padding: 0.75rem 1.5rem;
         display: inline-block;
-        transition: background-color 0.3s, color 0.3s;
+        transition: all 0.3s ease;
         font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9em;
       }
       nav a:hover {
-        background-color: #2979ff; /* Blue hover */
+        background-color: #1565c0; /* Darker blue hover */
         color: #ffffff;
+        box-shadow: 0 0 10px #1565c0; /* Blue glow effect */
       }
 
       /* Section Styling */
@@ -66,18 +72,20 @@
       }
       section h2 {
         text-align: center;
-        color: #2979ff; /* Blue Accent color for headings */
+        color: #42a5f5; /* Bright Blue for headings */
         font-size: 2em;
         margin-bottom: 2rem;
         position: relative;
+        text-transform: uppercase;
       }
       section h2::after {
         content: "";
         display: block;
-        width: 50px;
-        height: 3px;
-        background: #2979ff; /* Blue underline */
+        width: 60px;
+        height: 4px;
+        background: #42a5f5; /* Blue underline */
         margin: 10px auto 0;
+        border-radius: 2px;
       }
 
       /* About Section */
@@ -88,15 +96,15 @@
         height: 180px;
         border-radius: 50%;
         object-fit: cover;
-        border: 5px solid #1f1f1f;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        border: 4px solid #1e88e5; /* Blue border around profile */
+        box-shadow: 0 0 20px rgba(30, 136, 229, 0.3); /* Blue glow */
       }
       #about p {
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
         font-size: 1.1em;
-        color: #bdbdbd;
+        color: #b0bec5;
       }
 
       /* Projects Section */
@@ -106,31 +114,33 @@
         gap: 2rem;
       }
       .project {
-        background: #1f1f1f; /* Dark card background */
+        background: #161b22; /* Very dark blue-tinted gray */
         padding: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s;
-        border-top: 5px solid #2979ff; /* Blue top border */
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid #333;
+        border-top: 4px solid #1e88e5; /* Blue top stripe */
       }
       .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 8px 25px rgba(30, 136, 229, 0.15); /* Blue shadow on hover */
+        border-color: #1e88e5;
       }
       .project h3 {
-        color: #ffffff;
+        color: #e3f2fd; /* Very light blue-white */
         margin-top: 0;
         font-size: 1.25em;
       }
       .project p {
         font-size: 0.95em;
-        color: #bdbdbd;
+        color: #b0bec5;
       }
 
       /* Resume Section */
       #resume h3 {
-        color: #2979ff; /* Blue subheadings */
-        border-bottom: 2px solid #444;
+        color: #64b5f6; /* Lighter blue for subheaders */
+        border-bottom: 1px solid #333;
         padding-bottom: 0.5rem;
         margin-top: 2rem;
       }
@@ -139,54 +149,65 @@
         padding: 0;
       }
       #resume ul li {
-        background: #1f1f1f;
-        padding: 1rem;
-        margin-bottom: 0.5rem;
-        border-left: 5px solid #2979ff; /* Blue accent border */
-        border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        background: #111;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #1e88e5; /* Blue accent bar */
+        border-radius: 0 4px 4px 0;
         color: #e0e0e0;
+      }
+      #resume strong {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.05em;
       }
       #resume a {
         display: inline-block;
         margin-top: 1.5rem;
-        padding: 10px 20px;
-        background: #2979ff; /* Blue Button */
-        color: #ffffff; /* White text on blue button */
+        padding: 12px 24px;
+        background: #1565c0; /* Blue Button */
+        color: #ffffff;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 4px;
         transition: background 0.3s;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
       #resume a:hover {
-        background: #1565c0; /* Darker blue on hover */
+        background: #0d47a1; /* Darker blue active state */
       }
 
       /* Contact Section */
       #contact {
         text-align: center;
+        background: #0f0f0f;
       }
       #contact p {
         font-size: 1.1em;
-        margin: 0.75rem 0;
+        margin: 1rem 0;
+        color: #b0bec5;
       }
       #contact a {
-        color: #2979ff; /* Blue links */
+        color: #42a5f5;
         text-decoration: none;
+        font-weight: bold;
         transition: color 0.3s;
       }
       #contact a:hover {
-        color: #1565c0; /* Darker blue link hover */
+        color: #90caf9;
+        text-decoration: underline;
       }
 
       /* Footer */
       footer {
-        background: #1f1f1f;
-        color: #bdbdbd;
+        background: #000000;
+        color: #757575;
         text-align: center;
-        padding: 1.5rem 0;
-        margin-top: 3rem;
+        padding: 2rem 0;
+        margin-top: 0;
         font-size: 0.9em;
+        border-top: 1px solid #222;
       }
     </style>
   </head>
@@ -206,17 +227,13 @@
     <section id="about">
       <div class="container">
         <h2>About Me</h2>
-        <img
-          src="images/profile_pic.jpg"
-          alt="Max Johnson"
-          style="width: 180px; border-radius: 50%"
-        />
+        <img src="images/profile_pic.jpg" alt="Max Johnson" />
         <p>
           Hello! I am pursuing a career in software development. I am graduating
           with a B.S. in Computer Science, specializing in simulation and
-          [cite_start]artificial intelligence[cite: 20, 21]. I have a strong
-          foundation in diverse programming languages and experience in both
-          academic tutoring and [cite_start]industrial technology[cite: 6, 9].
+          artificial intelligence. I have a strong foundation in diverse
+          programming languages and experience in both academic tutoring and
+          industrial technology.
         </p>
       </div>
     </section>
@@ -230,8 +247,7 @@
             <p>
               A deep learning AI model trained to recognize age from
               photographs. Trained on the IMDB-WIKI dataset, it uses tensorflow
-              [cite_start]keras to run prediction on a given set of images[cite:
-              31, 32].
+              keras to run prediction on a given set of images.
             </p>
           </div>
           <div class="project">
@@ -239,7 +255,7 @@
             <p>
               A fully working image board where users can create or reply to
               threads, and post videos and images. Built as an experiment in
-              [cite_start]"vibe coding"[cite: 34, 35, 36].
+              "vibe coding".
             </p>
           </div>
           <div class="project">
@@ -247,7 +263,7 @@
             <p>
               A mod for the video game *Barotrauma* that lets users save and
               load circuit blueprints. It works using a C# to Lua interconnect
-              [cite_start]and has garnered over 3,000 users[cite: 42, 43].
+              and has garnered over 3,000 users.
             </p>
           </div>
           <div class="project">
@@ -255,8 +271,7 @@
             <p>
               A Unity game used by the psychology department of Fresno State to
               diagnose ADHD in children. It uses greenscreens and eye tracking
-              [cite_start]to measure responses to timed distractors[cite: 49,
-              50, 51].
+              to measure responses to timed distractors.
             </p>
           </div>
           <div class="project">
@@ -265,15 +280,14 @@
               A modification of the video game *Midi Playground* used to
               automatically create YouTube shorts. Input a Midi file and the
               program generates a fully animated and synchronized video with one
-              [cite_start]click[cite: 53, 54].
+              click.
             </p>
           </div>
           <div class="project">
             <h3>Macro Recorder - AutoHotKey Script</h3>
             <p>
               An AutoHotKey script that can record and replay mouse and keyboard
-              commands. [cite_start]It can also export AHK scripts of the
-              recording[cite: 46, 47].
+              commands. It can also export AHK scripts of the recording.
             </p>
           </div>
         </div>
@@ -288,14 +302,14 @@
         <ul>
           <li>
             <strong>Computer Science Tutor</strong>, Fresno City College, Fresno
-            (August 2022 - [cite_start]Present): Provided instruction in
-            computer science to students[cite: 6, 7, 8].
+            (August 2022 - Present): Provided instruction in computer science to
+            students.
           </li>
           <li>
             <strong>Assembly Technician</strong>, Maxco Supply, Parlier
             (February 2020 - August 2022): Built box forming machinery,
-            programmed PLCs, and [cite_start]performed general electrical
-            diagnostic and repair[cite: 9, 10, 11].
+            programmed PLCs, and performed general electrical diagnostic and
+            repair.
           </li>
         </ul>
 
@@ -304,35 +318,32 @@
           <li>
             <strong>B.S. in Computer Science</strong>, Fresno State University,
             Fresno (Graduated 2024): Specialized in simulation and artificial
-            [cite_start]intelligence[cite: 20, 21].
+            intelligence.
           </li>
           <li>
             <strong>A.S. in Mechatronics</strong>, Clovis Community College,
             Clovis (August 2019 - August 2021): Focused on PLC programming and
-            industrial [cite_start]technology[cite: 22, 23].
+            industrial technology.
           </li>
         </ul>
 
         <h3>Skills</h3>
         <ul>
-          [cite_start]
           <li>
             <strong>Programming Languages</strong>: C++, C#, Javascript, Python,
-            Lua[cite: 13].
+            Lua.
           </li>
           <li>
-            [cite_start]<strong>Frameworks/Engines</strong>: React, Bootstrap,
-            PostgreSQL, Unity, Godot[cite: 16, 18].
+            <strong>Frameworks/Engines</strong>: React, Bootstrap, PostgreSQL,
+            Unity, Godot.
           </li>
-          [cite_start]
           <li>
             <strong>Concepts</strong>: Artificial Intelligence, Machine
-            Learning[cite: 17].
+            Learning.
           </li>
-          [cite_start]
           <li>
             <strong>Technical</strong>: Electronics, Industrial Technology
-            (PLCs)[cite: 14, 15].
+            (PLCs).
           </li>
         </ul>
 
