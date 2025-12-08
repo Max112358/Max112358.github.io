@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Max Johnson - Software Developer Portfolio</title>
     <style>
-      /* General Reset and Base Styles */
+      /* General Reset and Base Styles - DARK MODE */
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background-color: #f4f7f6; /* Light gray background */
-        color: #333;
+        background-color: #121212; /* Very dark background */
+        color: #e0e0e0; /* Light text */
       }
 
       /* Header and Navigation */
       header {
-        background: #2c3e50; /* Dark blue/charcoal header */
-        color: #ecf0f1; /* Light text */
+        background: #1f1f1f; /* Darker header */
+        color: #ffffff; /* White text */
         padding: 3rem 0;
         text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
       }
       header h1 {
         margin: 0;
@@ -30,20 +30,20 @@
       header p {
         margin: 0.5rem 0 0;
         font-size: 1.2em;
-        color: #bdc3c7; /* Slightly lighter gray for tagline */
+        color: #bdbdbd; /* Gray for tagline */
       }
 
       nav {
-        background: #34495e; /* Slightly lighter dark blue for nav */
+        background: #2a2a2a; /* Slightly lighter dark for nav */
         text-align: center;
         padding: 0.75rem 0;
         position: sticky;
         top: 0;
         z-index: 1000;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       }
       nav a {
-        color: #ecf0f1;
+        color: #ffffff;
         text-decoration: none;
         padding: 0.75rem 1.5rem;
         display: inline-block;
@@ -51,8 +51,8 @@
         font-weight: bold;
       }
       nav a:hover {
-        background-color: #e67e22; /* Vibrant orange hover */
-        color: #fff;
+        background-color: #ffa726; /* Vibrant orange hover */
+        color: #121212;
       }
 
       /* Section Styling */
@@ -66,7 +66,7 @@
       }
       section h2 {
         text-align: center;
-        color: #2c3e50;
+        color: #ffa726; /* Accent color for headings */
         font-size: 2em;
         margin-bottom: 2rem;
         position: relative;
@@ -76,7 +76,7 @@
         display: block;
         width: 50px;
         height: 3px;
-        background: #e67e22;
+        background: #ffa726;
         margin: 10px auto 0;
       }
 
@@ -88,15 +88,15 @@
         height: 180px;
         border-radius: 50%;
         object-fit: cover;
-        border: 5px solid #fff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border: 5px solid #1f1f1f;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
       }
       #about p {
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
         font-size: 1.1em;
-        color: #555;
+        color: #bdbdbd;
       }
 
       /* Projects Section */
@@ -106,31 +106,31 @@
         gap: 2rem;
       }
       .project {
-        background: #fff;
+        background: #1f1f1f; /* Dark card background */
         padding: 1.5rem;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s;
-        border-top: 5px solid #e67e22;
+        border-top: 5px solid #ffa726;
       }
       .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
       }
       .project h3 {
-        color: #2c3e50;
+        color: #ffffff;
         margin-top: 0;
         font-size: 1.25em;
       }
       .project p {
         font-size: 0.95em;
-        color: #777;
+        color: #bdbdbd;
       }
 
       /* Resume Section */
       #resume h3 {
-        color: #e67e22;
-        border-bottom: 2px solid #ccc;
+        color: #ffa726;
+        border-bottom: 2px solid #444;
         padding-bottom: 0.5rem;
         margin-top: 2rem;
       }
@@ -139,26 +139,27 @@
         padding: 0;
       }
       #resume ul li {
-        background: #fff;
+        background: #1f1f1f;
         padding: 1rem;
         margin-bottom: 0.5rem;
-        border-left: 5px solid #2c3e50;
+        border-left: 5px solid #ffa726;
         border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        color: #e0e0e0;
       }
       #resume a {
         display: inline-block;
         margin-top: 1.5rem;
         padding: 10px 20px;
-        background: #e67e22;
-        color: #fff;
+        background: #ffa726;
+        color: #121212; /* Dark text on bright button */
         text-decoration: none;
         border-radius: 5px;
         transition: background 0.3s;
         font-weight: bold;
       }
       #resume a:hover {
-        background: #d35400;
+        background: #e57300;
       }
 
       /* Contact Section */
@@ -170,18 +171,18 @@
         margin: 0.75rem 0;
       }
       #contact a {
-        color: #e67e22;
+        color: #ffa726;
         text-decoration: none;
         transition: color 0.3s;
       }
       #contact a:hover {
-        color: #d35400;
+        color: #e57300;
       }
 
       /* Footer */
       footer {
-        background: #333;
-        color: #bdc3c7;
+        background: #1f1f1f;
+        color: #bdbdbd;
         text-align: center;
         padding: 1.5rem 0;
         margin-top: 3rem;
@@ -191,10 +192,8 @@
   </head>
   <body>
     <header>
-      [cite_start]
-      <h1>Max Johnson [cite: 1]</h1>
-      [cite_start]
-      <p>Pursuing a career in software development [cite: 2]</p>
+      <h1>Max Johnson</h1>
+      <p>Pursuing a career in software development</p>
     </header>
 
     <nav>
@@ -213,12 +212,11 @@
           style="width: 180px; border-radius: 50%"
         />
         <p>
-          Hello! [cite_start]I am pursuing a career in software
-          development[cite: 2]. [cite_start]I am graduating with a B.S. in
-          Computer Science, specializing in simulation and artificial
-          intelligence[cite: 20, 21]. [cite_start]I have a strong foundation in
-          diverse programming languages and experience in both academic tutoring
-          and industrial technology[cite: 13, 15, 7].
+          Hello! I am pursuing a career in software development. I am graduating
+          with a B.S. in Computer Science, specializing in simulation and
+          artificial intelligence. I have a strong foundation in diverse
+          programming languages and experience in both academic tutoring and
+          industrial technology.
         </p>
       </div>
     </section>
@@ -228,66 +226,51 @@
         <h2>Projects</h2>
         <div class="project-grid">
           <div class="project">
-            [cite_start]
-            <h3>AI Age Detection - Deep Learning Model [cite: 29]</h3>
-            [cite_start]
+            <h3>AI Age Detection - Deep Learning Model</h3>
             <p>
               A deep learning AI model trained to recognize age from
-              photographs[cite: 30, 31]. [cite_start]Trained on the IMDB-WIKI
-              dataset, it uses tensorflow keras to run prediction on a given set
-              of images[cite: 31, 32].
+              photographs. Trained on the IMDB-WIKI dataset, it uses tensorflow
+              keras to run prediction on a given set of images.
             </p>
           </div>
           <div class="project">
-            [cite_start]
-            <h3>Conniption.xyz - Image Board Website [cite: 33]</h3>
-            [cite_start]
+            <h3>Conniption.xyz - Image Board Website</h3>
             <p>
               A fully working image board where users can create or reply to
-              threads, and post videos and images[cite: 35, 36].
-              [cite_start]Built as an experiment in "vibe coding"[cite: 34].
+              threads, and post videos and images. Built as an experiment in
+              "vibe coding".
             </p>
           </div>
           <div class="project">
-            [cite_start]
-            <h3>Video Game Mod - Blueprints [cite: 40, 41]</h3>
-            [cite_start]
+            <h3>Video Game Mod - Blueprints</h3>
             <p>
               A mod for the video game *Barotrauma* that lets users save and
-              load circuit blueprints[cite: 42]. [cite_start]It works using a C#
-              to Lua interconnect and has garnered over 3,000 users[cite: 43].
+              load circuit blueprints. It works using a C# to Lua interconnect
+              and has garnered over 3,000 users.
             </p>
           </div>
           <div class="project">
-            [cite_start]
-            <h3>VR Diagnostic Tool - VR Simulation [cite: 48]</h3>
-            [cite_start]
+            <h3>VR Diagnostic Tool - VR Simulation</h3>
             <p>
               A Unity game used by the psychology department of Fresno State to
-              diagnose ADHD in children[cite: 49, 51]. [cite_start]It uses
-              greenscreens and eye tracking to measure responses to timed
-              distractors[cite: 49, 50].
+              diagnose ADHD in children. It uses greenscreens and eye tracking
+              to measure responses to timed distractors.
             </p>
           </div>
           <div class="project">
-            [cite_start]
-            <h3>BeatBox - Automatic YouTube Music Videos [cite: 52]</h3>
-            [cite_start]
+            <h3>BeatBox - Automatic YouTube Music Videos</h3>
             <p>
               A modification of the video game *Midi Playground* used to
-              automatically create YouTube shorts[cite: 53]. [cite_start]Input a
-              Midi file and the program generates a fully animated and
-              synchronized video with one click[cite: 54].
+              automatically create YouTube shorts. Input a Midi file and the
+              program generates a fully animated and synchronized video with one
+              click.
             </p>
           </div>
           <div class="project">
-            [cite_start]
-            <h3>Macro Recorder - AutoHotKey Script [cite: 45]</h3>
-            [cite_start]
+            <h3>Macro Recorder - AutoHotKey Script</h3>
             <p>
               An AutoHotKey script that can record and replay mouse and keyboard
-              commands[cite: 46]. [cite_start]It can also export AHK scripts of
-              the recording[cite: 47].
+              commands. It can also export AHK scripts of the recording.
             </p>
           </div>
         </div>
@@ -298,63 +281,41 @@
       <div class="container">
         <h2>Resume Details</h2>
 
-        [cite_start]
-        <h3>Experience [cite: 5]</h3>
+        <h3>Experience</h3>
         <ul>
-          [cite_start]
           <li>
             **Computer Science Tutor**, Fresno City College, Fresno (August 2022
-            - Present) [cite: 6, 7][cite_start]: Provided instruction in
-            computer science to students[cite: 8].
+            - Present): Provided instruction in computer science to students.
           </li>
-          [cite_start]
           <li>
             **Assembly Technician**, Maxco Supply, Parlier (February 2020 -
-            August 2022) [cite: 9, 10][cite_start]: Built box forming machinery,
-            programmed PLCs, and performed general electrical diagnostic and
-            repair[cite: 11].
+            August 2022): Built box forming machinery, programmed PLCs, and
+            performed general electrical diagnostic and repair.
           </li>
         </ul>
 
-        [cite_start]
-        <h3>Education [cite: 19]</h3>
+        <h3>Education</h3>
         <ul>
-          [cite_start]
           <li>
             **B.S. in Computer Science**, Fresno State University, Fresno
-            (Graduated 2024) [cite: 20][cite_start]: Specialized in simulation
-            and artificial intelligence[cite: 21].
+            (Graduated 2024): Specialized in simulation and artificial
+            intelligence.
           </li>
-          [cite_start]
           <li>
             **A.S. in Mechatronics**, Clovis Community College, Clovis (August
-            2019 - August 2021) [cite: 22][cite_start]: Focused on PLC
-            programming and industrial technology[cite: 23].
+            2019 - August 2021): Focused on PLC programming and industrial
+            technology.
           </li>
         </ul>
 
-        [cite_start]
-        <h3>Skills [cite: 12]</h3>
+        <h3>Skills</h3>
         <ul>
-          [cite_start]
+          <li>**Programming Languages**: C++, C#, Javascript, Python, Lua.</li>
           <li>
-            **Programming Languages**: C++, C#, Javascript, Python, Lua[cite:
-            13].
+            **Frameworks/Engines**: React, Bootstrap, PostgreSQL, Unity, Godot.
           </li>
-          [cite_start]
-          <li>
-            **Frameworks/Engines**: React, Bootstrap, PostgreSQL, Unity,
-            Godot[cite: 18, 16].
-          </li>
-          [cite_start]
-          <li>
-            **Concepts**: Artificial Intelligence, Machine Learning[cite: 17].
-          </li>
-          [cite_start]
-          <li>
-            **Technical**: Electronics, Industrial Technology (PLCs)[cite: 14,
-            15].
-          </li>
+          <li>**Concepts**: Artificial Intelligence, Machine Learning.</li>
+          <li>**Technical**: Electronics, Industrial Technology (PLCs).</li>
         </ul>
 
         <a href="Resume.pdf" target="_blank">Download Full Resume (PDF)</a>
@@ -364,29 +325,24 @@
     <section id="contact">
       <div class="container">
         <h2>Contact</h2>
-        [cite_start]
         <p>
           Email:
           <a href="mailto:maxjohnson87@protonmail.com"
             >maxjohnson87@protonmail.com</a
           >
-          [cite: 4]
         </p>
-        [cite_start]
-        <p>Phone: (559) 765-5207 [cite: 4]</p>
-        [cite_start]
+        <p>Phone: (559) 765-5207</p>
         <p>
           GitHub:
           <a href="https://github.com/Max112358" target="_blank"
             >https://github.com/Max112358</a
           >
-          [cite: 38]
         </p>
       </div>
     </section>
 
     <footer>
-      <p>&copy; [cite_start]2024 Max Johnson[cite: 1]. All rights reserved.</p>
+      <p>&copy; 2024 Max Johnson. All rights reserved.</p>
     </footer>
   </body>
 </html>
