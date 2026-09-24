@@ -1,0 +1,23 @@
+:root {
+  --bg: #0b0c10;
+  --bg-soft: #12151c;
+  --bg-card: #161a23;
+  --bg-card-hover: #1c212c;
+
+  --text: #e6e8ef;
+  --text-muted: #9aa3b2;
+
+  --accent: #4f8cff;
+  --accent-hover: #3a7aee;
+  --accent-soft: rgba(79, 140, 255, 0.12);
+  --accent-border: rgba(79, 140, 255, 0.35);
+
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --radius: 14px;
+  --max-width: 1080px;
+
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.25s ease;
+  --transition-slow: 0.6s ease;
+}

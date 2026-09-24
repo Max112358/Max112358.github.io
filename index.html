@@ -9,602 +9,26 @@
     />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <title>Max Johnson - Software Developer</title>
-    <style>
-      :root {
-        --bg: #0b0c10;
-        --bg-soft: #12151c;
-        --bg-card: #161a23;
-        --bg-card-hover: #1c212c;
-        --text: #e6e8ef;
-        --text-muted: #9aa3b2;
-        --accent: #4f8cff;
-        --accent-soft: rgba(79, 140, 255, 0.12);
-        --border: rgba(255, 255, 255, 0.08);
-        --shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-        --radius: 14px;
-        --max-width: 1080px;
-      }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family:
-          Inter,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.65;
-        font-size: 16px;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      a {
-        color: var(--accent);
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
-
-      a:hover {
-        color: #7dabff;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      .container {
-        width: 90%;
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 0 1rem;
-      }
-
-      /* Navigation */
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background: rgba(11, 12, 16, 0.82);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 64px;
-      }
-
-      .nav-logo {
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        color: var(--text);
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 1.75rem;
-      }
-
-      .nav-links a {
-        color: var(--text-muted);
-        font-size: 0.92rem;
-        font-weight: 500;
-      }
-
-      .nav-links a:hover {
-        color: var(--text);
-      }
-
-      .nav-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: var(--text);
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-
-      /* Hero */
-      .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 7rem 1rem 5rem;
-        background:
-          radial-gradient(
-            ellipse at 50% 0%,
-            rgba(79, 140, 255, 0.15) 0%,
-            transparent 55%
-          ),
-          var(--bg);
-      }
-
-      .hero-content {
-        max-width: 760px;
-        animation: fadeUp 0.8s ease both;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.4rem, 6vw, 4rem);
-        font-weight: 800;
-        letter-spacing: -0.03em;
-        margin-bottom: 0.5rem;
-        line-height: 1.1;
-      }
-
-      .hero-role {
-        font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-        color: var(--accent);
-        font-weight: 600;
-        margin-bottom: 1.25rem;
-      }
-
-      .hero-location {
-        color: var(--text-muted);
-        font-size: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .hero p {
-        color: var(--text-muted);
-        font-size: 1.1rem;
-        margin-bottom: 2.25rem;
-      }
-
-      .btn-row {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.85rem 1.6rem;
-        border-radius: 999px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease,
-          background 0.2s ease;
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        color: #fff;
-      }
-
-      .btn-primary:hover {
-        background: #3a7aee;
-        color: #fff;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(79, 140, 255, 0.3);
-      }
-
-      .btn-secondary {
-        background: var(--bg-card);
-        color: var(--text);
-        border: 1px solid var(--border);
-      }
-
-      .btn-secondary:hover {
-        background: var(--bg-card-hover);
-        color: var(--text);
-        transform: translateY(-2px);
-      }
-
-      /* Sections */
-      section {
-        padding: 5.5rem 0;
-      }
-
-      section:nth-of-type(even) {
-        background: var(--bg-soft);
-      }
-
-      .section-header {
-        margin-bottom: 3rem;
-      }
-
-      .section-header h2 {
-        font-size: clamp(1.7rem, 4vw, 2.25rem);
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        margin-bottom: 0.6rem;
-      }
-
-      .section-header p {
-        color: var(--text-muted);
-        font-size: 1.05rem;
-        max-width: 560px;
-      }
-
-      /* Contact section overrides */
-      .contact {
-        text-align: center;
-      }
-
-      .contact .section-header {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-      }
-
-      .contact .section-header p {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 560px;
-      }
-
-      /* About */
-      .about-content {
-        display: grid;
-        grid-template-columns: 180px 1fr;
-        gap: 2.5rem;
-        align-items: center;
-      }
-
-      .profile-img {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--accent);
-        box-shadow: 0 8px 30px rgba(79, 140, 255, 0.18);
-      }
-
-      .about-text p {
-        color: var(--text-muted);
-        margin-bottom: 1rem;
-        font-size: 1.05rem;
-      }
-
-      /* Skills */
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .skill-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.5rem;
-        transition:
-          transform 0.2s ease,
-          border-color 0.2s ease;
-      }
-
-      .skill-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(79, 140, 255, 0.35);
-      }
-
-      .skill-card h4 {
-        font-size: 1rem;
-        margin-bottom: 0.85rem;
-        color: var(--text);
-      }
-
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .tag {
-        background: var(--accent-soft);
-        color: var(--accent);
-        font-size: 0.82rem;
-        font-weight: 600;
-        padding: 0.35rem 0.75rem;
-        border-radius: 999px;
-      }
-
-      /* Projects */
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.75rem;
-      }
-
-      .project-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.75rem;
-        display: flex;
-        flex-direction: column;
-        color: var(--text);
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease,
-          border-color 0.25s ease;
-      }
-
-      .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow);
-        border-color: rgba(79, 140, 255, 0.35);
-        color: var(--text);
-      }
-
-      .project-card h3 {
-        font-size: 1.15rem;
-        margin-bottom: 0.75rem;
-        line-height: 1.35;
-        color: var(--text);
-      }
-
-      .project-card:hover h3 {
-        color: var(--accent);
-      }
-
-      .project-card p {
-        color: var(--text-muted);
-        font-size: 0.96rem;
-        flex-grow: 1;
-        margin-bottom: 1rem;
-      }
-
-      .project-meta {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.85rem;
-        color: var(--accent);
-        font-weight: 600;
-      }
-
-      /* Resume / Experience */
-      .timeline {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .entry {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.75rem;
-        transition: border-color 0.2s ease;
-      }
-
-      .entry:hover {
-        border-color: rgba(79, 140, 255, 0.25);
-      }
-
-      .entry-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 0.85rem;
-      }
-
-      .entry-title {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--text);
-      }
-
-      .entry-company {
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 0.95rem;
-      }
-
-      .entry-dates {
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        font-weight: 500;
-      }
-
-      .entry ul {
-        list-style: none;
-        margin-top: 0.75rem;
-      }
-
-      .entry li {
-        color: var(--text-muted);
-        font-size: 0.96rem;
-        padding-left: 1.25rem;
-        position: relative;
-        margin-bottom: 0.5rem;
-      }
-
-      .entry li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.55rem;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--accent);
-      }
-
-      /* Education */
-      .education-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .edu-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.75rem;
-      }
-
-      .edu-card h3 {
-        font-size: 1.15rem;
-        margin-bottom: 0.25rem;
-      }
-
-      .edu-card .degree {
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 0.95rem;
-        margin-bottom: 0.4rem;
-      }
-
-      .edu-card .dates {
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .edu-card p {
-        color: var(--text-muted);
-        font-size: 0.94rem;
-      }
-
-      /* Contact */
-      .contact-grid {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.25rem;
-        margin-top: 2rem;
-      }
-
-      .contact-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.25rem 1.75rem;
-        min-width: 220px;
-        transition:
-          transform 0.2s ease,
-          border-color 0.2s ease;
-      }
-
-      .contact-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(79, 140, 255, 0.35);
-      }
-
-      .contact-card .label {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--text-muted);
-        margin-bottom: 0.25rem;
-      }
-
-      .contact-card a,
-      .contact-card span {
-        font-weight: 600;
-        color: var(--text);
-        font-size: 1rem;
-      }
-
-      /* Footer */
-      footer {
-        text-align: center;
-        padding: 2.5rem 0;
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        border-top: 1px solid var(--border);
-      }
-
-      /* Reveal animation */
-      .reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition:
-          opacity 0.6s ease,
-          transform 0.6s ease;
-      }
-
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsive */
-      @media (max-width: 720px) {
-        .nav-links {
-          display: none;
-          flex-direction: column;
-          position: absolute;
-          top: 64px;
-          left: 0;
-          right: 0;
-          background: var(--bg);
-          border-bottom: 1px solid var(--border);
-          padding: 1rem 2rem;
-          gap: 1rem;
-        }
-
-        .nav-links.open {
-          display: flex;
-        }
-
-        .nav-toggle {
-          display: block;
-        }
-
-        .about-content {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-
-        .profile-img {
-          margin: 0 auto;
-        }
-
-        .entry-header {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <nav>
-      <div class="container nav-inner">
-        <a href="#" class="nav-logo">Max Johnson</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <div class="nav-links">
+    <nav class="nav">
+      <div class="container nav__inner">
+        <a href="#" class="nav__logo">Max Johnson</a>
+        <button
+          class="nav__toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <div class="nav__links" id="nav-links">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
@@ -616,399 +40,401 @@
     </nav>
 
     <header class="hero">
-      <div class="hero-content">
+      <div class="hero__content">
         <h1>Max Johnson</h1>
-        <p class="hero-role">Software Developer</p>
-        <p class="hero-location">📍 Fresno, CA</p>
+        <p class="hero__role">Software Developer</p>
+        <p class="hero__location">📍 Fresno, CA</p>
         <p>
           Full-stack developer with a strong foundation in systems programming,
           cloud infrastructure, and AI. I build reliable software from embedded
           firmware to distributed web platforms.
         </p>
         <div class="btn-row">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="files/Resume.pdf" class="btn btn-secondary" target="_blank"
-            >Download Resume</a
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a
+            href="files/Resume.pdf"
+            class="btn btn--secondary"
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            Download Resume
+          </a>
         </div>
       </div>
     </header>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>About Me</h2>
-          <p>A quick introduction to my background and what I do.</p>
-        </div>
-        <div class="about-content reveal">
-          <img
-            src="images/profile_pic.png"
-            alt="Max Johnson"
-            class="profile-img"
-          />
-          <div class="about-text">
-            <p>
-              I recently graduated from Fresno State University with a B.S. in
-              Computer Science, focusing on simulation and artificial
-              intelligence. With an earlier A.S. in Mechatronics, I bring a
-              unique blend of software engineering and hands-on automation
-              experience.
-            </p>
-            <p>
-              I have worked as a Computer Science Tutor, an industrial
-              automation technician, and currently build embedded show-control
-              systems for Fresno Fright Nights. My personal projects range from
-              distributed cloud infrastructure and deep learning models to
-              procedural 3D tools and game mods used by thousands of players.
-            </p>
+    <main>
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section__header reveal">
+            <h2>About Me</h2>
+            <p>A quick introduction to my background and what I do.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Skills</h2>
-          <p>Languages, frameworks, and concepts I work with regularly.</p>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <h4>Languages & Frameworks</h4>
-            <div class="tags">
-              <span class="tag">C++</span>
-              <span class="tag">C#</span>
-              <span class="tag">Python</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Lua</span>
-              <span class="tag">HTML/CSS</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <h4>Web & Cloud</h4>
-            <div class="tags">
-              <span class="tag">Full-Stack Architecture</span>
-              <span class="tag">RESTful APIs</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Cloudflare</span>
-              <span class="tag">AWS/R2</span>
-              <span class="tag">Render</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <h4>Core CS</h4>
-            <div class="tags">
-              <span class="tag">Data Structures & Algorithms</span>
-              <span class="tag">Systems Programming</span>
-              <span class="tag">Memory Management</span>
-              <span class="tag">State Machines</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <h4>Developer Tools</h4>
-            <div class="tags">
-              <span class="tag">Git/GitHub</span>
-              <span class="tag">Linux/Unix</span>
-              <span class="tag">CI/CD</span>
-              <span class="tag">Debugging</span>
-              <span class="tag">Unit Testing</span>
+          <div class="about reveal">
+            <img
+              src="images/profile_pic.png"
+              alt="Max Johnson"
+              class="about__img"
+              width="180"
+              height="180"
+            />
+            <div class="about__text">
+              <p>
+                I recently graduated from Fresno State University with a B.S. in
+                Computer Science, focusing on simulation and artificial
+                intelligence. With an earlier A.S. in Mechatronics, I bring a
+                unique blend of software engineering and hands-on automation
+                experience.
+              </p>
+              <p>
+                I have worked as a Computer Science Tutor, an industrial
+                automation technician, and currently build embedded show-control
+                systems for Fresno Fright Nights. My personal projects range
+                from distributed cloud infrastructure and deep learning models
+                to procedural 3D tools and game mods used by thousands of
+                players.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Projects</h2>
-          <p>A selection of personal and public projects I have shipped.</p>
-        </div>
-        <div class="project-grid">
-          <a
-            href="https://conniption.xyz"
-            target="_blank"
-            class="project-card reveal"
-          >
-            <h3>Distributed Cloud Infrastructure & Full-Stack Platform</h3>
-            <p>
-              Multi-tier image board using Cloudflare for edge routing, Node.js
-              on Render, PostgreSQL via Aiven, and R2 object storage for
-              asynchronous media uploads.
-            </p>
-            <span class="project-meta">conniption.xyz →</span>
-          </a>
-
-          <a
-            href="https://steamcommunity.com/sharedfiles/filedetails/?id=3301014847"
-            target="_blank"
-            class="project-card reveal"
-          >
-            <h3>Barotrauma Circuit Blueprint Interconnect</h3>
-            <p>
-              Game mod with a C#-to-Lua translation layer for parsing and
-              serializing digital-logic circuit topologies, with persistent
-              state saving for 3,000+ active users.
-            </p>
-            <span class="project-meta">Steam Workshop →</span>
-          </a>
-
-          <a
-            href="https://github.com/Max112358/Facial-Recognition-of-Age"
-            target="_blank"
-            class="project-card reveal"
-          >
-            <h3>Deep Learning Age Estimation Model</h3>
-            <p>
-              CNN built with Python and TensorFlow/Keras, trained on the
-              IMDB-WIKI dataset for age-range prediction from image data.
-            </p>
-            <span class="project-meta">GitHub →</span>
-          </a>
-
-          <a
-            href="https://max112358.github.io/tabletop_dice_roller/"
-            target="_blank"
-            class="project-card reveal"
-          >
-            <h3>Tabletop Dice Roller</h3>
-            <p>
-              Vanilla-JS RPG dice engine supporting advantage, exploding dice,
-              pools, success checks, and persistent character/world profiles
-              with drag-and-drop UI.
-            </p>
-            <span class="project-meta">Live Demo →</span>
-          </a>
-
-          <a
-            href="https://max112358.github.io/bottle_maker/"
-            target="_blank"
-            class="project-card reveal"
-          >
-            <h3>Bottle Maker</h3>
-            <p>
-              Procedural 3D bottle designer with Three.js, real-time mesh
-              generation, PBR materials, procedural textures, paper labels, and
-              GLB export.
-            </p>
-            <span class="project-meta">Live Demo →</span>
-          </a>
-
-          <a
-            href="https://www.youtube.com/shorts/KUcHtveAfOo"
-            target="_blank"
-            class="project-card reveal"
-          >
-            <h3>BeatBox</h3>
-            <p>
-              A modification of Midi Playground that turns MIDI files into fully
-              animated, synchronized YouTube Shorts with one click.
-            </p>
-            <span class="project-meta">YouTube Short →</span>
-          </a>
-
-          <a
-            href="https://github.com/Max112358/Macro-Recorder"
-            target="_blank"
-            class="project-card reveal"
-          >
-            <h3>Macro Recorder</h3>
-            <p>
-              An AutoHotKey utility that records and replays mouse and keyboard
-              input, with the ability to export recordings as reusable AHK
-              scripts.
-            </p>
-            <span class="project-meta">GitHub →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Work Experience</h2>
-          <p>
-            My professional history across software, education, and automation.
-          </p>
-        </div>
-        <div class="timeline">
-          <div class="entry reveal">
-            <div class="entry-header">
-              <div>
-                <div class="entry-title">
-                  Prop & Automation Software Technician
-                </div>
-                <div class="entry-company">
-                  Fresno Fright Nights · Fresno, CA
-                </div>
+      <section id="skills" class="section section--alt">
+        <div class="container">
+          <div class="section__header reveal">
+            <h2>Skills</h2>
+            <p>Languages, frameworks, and concepts I work with regularly.</p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <h4>Languages & Frameworks</h4>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">C#</span>
+                <span class="tag">Python</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Lua</span>
+                <span class="tag">HTML/CSS</span>
               </div>
-              <div class="entry-dates">Aug 2025 – Present</div>
-            </div>
-            <ul>
-              <li>
-                Programmed and deployed embedded C/C++ firmware on ATtiny85 and
-                Arduino controllers for automated state transitions and
-                real-time execution loops.
-              </li>
-              <li>
-                Developed control scripts to synchronize event triggers, audio
-                streams, and low-latency digital outputs during live operations.
-              </li>
-              <li>
-                Performed system-level debugging, sensor diagnostics, and fault
-                recovery to maintain 100% operational reliability.
-              </li>
-            </ul>
-          </div>
-
-          <div class="entry reveal">
-            <div class="entry-header">
-              <div>
-                <div class="entry-title">Computer Science Tutor</div>
-                <div class="entry-company">
-                  Fresno City College · Fresno, CA
-                </div>
+            </article>
+            <article class="skill-card reveal">
+              <h4>Web & Cloud</h4>
+              <div class="tags">
+                <span class="tag">Full-Stack Architecture</span>
+                <span class="tag">RESTful APIs</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Cloudflare</span>
+                <span class="tag">AWS/R2</span>
+                <span class="tag">Render</span>
               </div>
-              <div class="entry-dates">Aug 2022 – Dec 2024</div>
-            </div>
-            <ul>
-              <li>
-                Tutored students in C++, Python, object-oriented design, and
-                foundational Data Structures & Algorithms.
-              </li>
-              <li>
-                Conducted code reviews focused on memory management, pointer
-                manipulation, time complexity, and clean code practices.
-              </li>
-              <li>
-                Taught low-level debugging with GDB and IDE tools to resolve
-                segmentation faults and memory leaks.
-              </li>
-            </ul>
-          </div>
-
-          <div class="entry reveal">
-            <div class="entry-header">
-              <div>
-                <div class="entry-title">Assembly & Automation Technician</div>
-                <div class="entry-company">Maxco Supply · Parlier, CA</div>
+            </article>
+            <article class="skill-card reveal">
+              <h4>Core CS</h4>
+              <div class="tags">
+                <span class="tag">Data Structures & Algorithms</span>
+                <span class="tag">Systems Programming</span>
+                <span class="tag">Memory Management</span>
+                <span class="tag">State Machines</span>
               </div>
-              <div class="entry-dates">Feb 2020 – Aug 2022</div>
-            </div>
-            <ul>
-              <li>
-                Programmed and debugged industrial PLC logic scripts for
-                automated packaging machinery sequence-of-operations.
-              </li>
-              <li>
-                Diagnosed electrical and logical failures using schematics,
-                multimeters, and systematic state-testing procedures.
-              </li>
-            </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h4>Developer Tools</h4>
+              <div class="tags">
+                <span class="tag">Git/GitHub</span>
+                <span class="tag">Linux/Unix</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Debugging</span>
+                <span class="tag">Unit Testing</span>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="education">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Education</h2>
-          <p>Formal training in computer science and mechatronics.</p>
-        </div>
-        <div class="education-grid">
-          <div class="edu-card reveal">
-            <h3>Fresno State University</h3>
-            <div class="degree">Bachelor of Science in Computer Science</div>
-            <div class="dates">Graduated Dec 2024 · Fresno, CA</div>
-            <p>
-              Relevant coursework: Algorithms & Data Structures, Systems
-              Programming, Simulation, Artificial Intelligence.
-            </p>
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section__header reveal">
+            <h2>Projects</h2>
+            <p>A selection of personal and public projects I have shipped.</p>
           </div>
-          <div class="edu-card reveal">
-            <h3>Clovis Community College</h3>
-            <div class="degree">Associate of Science in Mechatronics</div>
-            <div class="dates">Aug 2019 – Aug 2021 · Clovis, CA</div>
-            <p>
-              Relevant coursework: Industrial Automation, Circuit Analysis, PLC
-              Programming Logic.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Contact</h2>
-          <p>
-            Open to software engineering, full-stack, systems, and embedded
-            opportunities.
-          </p>
-        </div>
-        <div class="contact-grid reveal">
-          <div class="contact-card">
-            <div class="label">Email</div>
-            <a href="mailto:maxjohnson87@protonmail.com"
-              >maxjohnson87@protonmail.com</a
+          <div class="project-grid">
+            <a
+              href="https://conniption.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card reveal"
             >
-          </div>
-          <div class="contact-card">
-            <div class="label">Phone</div>
-            <span>(559) 765-5207</span>
-          </div>
-          <div class="contact-card">
-            <div class="label">GitHub</div>
-            <a href="https://github.com/Max112358" target="_blank"
-              >github.com/Max112358</a
+              <h3>Distributed Cloud Infrastructure & Full-Stack Platform</h3>
+              <p>
+                Multi-tier image board using Cloudflare for edge routing,
+                Node.js on Render, PostgreSQL via Aiven, and R2 object storage
+                for asynchronous media uploads.
+              </p>
+              <span class="project-card__meta">conniption.xyz →</span>
+            </a>
+
+            <a
+              href="https://steamcommunity.com/sharedfiles/filedetails/?id=3301014847"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card reveal"
             >
+              <h3>Barotrauma Circuit Blueprint Interconnect</h3>
+              <p>
+                Game mod with a C#-to-Lua translation layer for parsing and
+                serializing digital-logic circuit topologies, with persistent
+                state saving for 3,000+ active users.
+              </p>
+              <span class="project-card__meta">Steam Workshop →</span>
+            </a>
+
+            <a
+              href="https://github.com/Max112358/Facial-Recognition-of-Age"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card reveal"
+            >
+              <h3>Deep Learning Age Estimation Model</h3>
+              <p>
+                CNN built with Python and TensorFlow/Keras, trained on the
+                IMDB-WIKI dataset for age-range prediction from image data.
+              </p>
+              <span class="project-card__meta">GitHub →</span>
+            </a>
+
+            <a
+              href="https://max112358.github.io/tabletop_dice_roller/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card reveal"
+            >
+              <h3>Tabletop Dice Roller</h3>
+              <p>
+                Vanilla-JS RPG dice engine supporting advantage, exploding dice,
+                pools, success checks, and persistent character/world profiles
+                with drag-and-drop UI.
+              </p>
+              <span class="project-card__meta">Live Demo →</span>
+            </a>
+
+            <a
+              href="https://max112358.github.io/bottle_maker/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card reveal"
+            >
+              <h3>Bottle Maker</h3>
+              <p>
+                Procedural 3D bottle designer with Three.js, real-time mesh
+                generation, PBR materials, procedural textures, paper labels,
+                and GLB export.
+              </p>
+              <span class="project-card__meta">Live Demo →</span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/shorts/KUcHtveAfOo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card reveal"
+            >
+              <h3>BeatBox</h3>
+              <p>
+                A modification of Midi Playground that turns MIDI files into
+                fully animated, synchronized YouTube Shorts with one click.
+              </p>
+              <span class="project-card__meta">YouTube Short →</span>
+            </a>
+
+            <a
+              href="https://github.com/Max112358/Macro-Recorder"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card reveal"
+            >
+              <h3>Macro Recorder</h3>
+              <p>
+                An AutoHotKey utility that records and replays mouse and
+                keyboard input, with the ability to export recordings as
+                reusable AHK scripts.
+              </p>
+              <span class="project-card__meta">GitHub →</span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer>
+      <section id="experience" class="section section--alt">
+        <div class="container">
+          <div class="section__header reveal">
+            <h2>Work Experience</h2>
+            <p>
+              My professional history across software, education, and
+              automation.
+            </p>
+          </div>
+          <div class="timeline">
+            <article class="entry reveal">
+              <header class="entry__header">
+                <div>
+                  <h3 class="entry__title">
+                    Prop & Automation Software Technician
+                  </h3>
+                  <p class="entry__company">
+                    Fresno Fright Nights · Fresno, CA
+                  </p>
+                </div>
+                <time class="entry__dates" datetime="2025-08"
+                  >Aug 2025 – Present</time
+                >
+              </header>
+              <ul class="entry__details">
+                <li>
+                  Programmed and deployed embedded C/C++ firmware on ATtiny85
+                  and Arduino controllers for automated state transitions and
+                  real-time execution loops.
+                </li>
+                <li>
+                  Developed control scripts to synchronize event triggers, audio
+                  streams, and low-latency digital outputs during live
+                  operations.
+                </li>
+                <li>
+                  Performed system-level debugging, sensor diagnostics, and
+                  fault recovery to maintain 100% operational reliability.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry reveal">
+              <header class="entry__header">
+                <div>
+                  <h3 class="entry__title">Computer Science Tutor</h3>
+                  <p class="entry__company">Fresno City College · Fresno, CA</p>
+                </div>
+                <time class="entry__dates" datetime="2022-08/2024-12"
+                  >Aug 2022 – Dec 2024</time
+                >
+              </header>
+              <ul class="entry__details">
+                <li>
+                  Tutored students in C++, Python, object-oriented design, and
+                  foundational Data Structures & Algorithms.
+                </li>
+                <li>
+                  Conducted code reviews focused on memory management, pointer
+                  manipulation, time complexity, and clean code practices.
+                </li>
+                <li>
+                  Taught low-level debugging with GDB and IDE tools to resolve
+                  segmentation faults and memory leaks.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry reveal">
+              <header class="entry__header">
+                <div>
+                  <h3 class="entry__title">Assembly & Automation Technician</h3>
+                  <p class="entry__company">Maxco Supply · Parlier, CA</p>
+                </div>
+                <time class="entry__dates" datetime="2020-02/2022-08"
+                  >Feb 2020 – Aug 2022</time
+                >
+              </header>
+              <ul class="entry__details">
+                <li>
+                  Programmed and debugged industrial PLC logic scripts for
+                  automated packaging machinery sequence-of-operations.
+                </li>
+                <li>
+                  Diagnosed electrical and logical failures using schematics,
+                  multimeters, and systematic state-testing procedures.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="container">
+          <div class="section__header reveal">
+            <h2>Education</h2>
+            <p>Formal training in computer science and mechatronics.</p>
+          </div>
+          <div class="education-grid">
+            <article class="edu-card reveal">
+              <h3>Fresno State University</h3>
+              <p class="edu-card__degree">
+                Bachelor of Science in Computer Science
+              </p>
+              <p class="edu-card__dates">Graduated Dec 2024 · Fresno, CA</p>
+              <p>
+                Relevant coursework: Algorithms & Data Structures, Systems
+                Programming, Simulation, Artificial Intelligence.
+              </p>
+            </article>
+            <article class="edu-card reveal">
+              <h3>Clovis Community College</h3>
+              <p class="edu-card__degree">
+                Associate of Science in Mechatronics
+              </p>
+              <p class="edu-card__dates">Aug 2019 – Aug 2021 · Clovis, CA</p>
+              <p>
+                Relevant coursework: Industrial Automation, Circuit Analysis,
+                PLC Programming Logic.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--alt contact">
+        <div class="container">
+          <div class="section__header section__header--centered reveal">
+            <h2>Contact</h2>
+            <p>
+              Open to software engineering, full-stack, systems, and embedded
+              opportunities.
+            </p>
+          </div>
+          <div class="contact-grid reveal">
+            <address class="contact-card">
+              <p class="contact-card__label">Email</p>
+              <a href="mailto:maxjohnson87@protonmail.com">
+                maxjohnson87@protonmail.com
+              </a>
+            </address>
+            <div class="contact-card">
+              <p class="contact-card__label">Phone</p>
+              <a href="tel:+15597655207">(559) 765-5207</a>
+            </div>
+            <div class="contact-card">
+              <p class="contact-card__label">GitHub</p>
+              <a
+                href="https://github.com/Max112358"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/Max112358
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
       <div class="container">
         <p>&copy; 2026 Max Johnson. All rights reserved.</p>
       </div>
     </footer>
 
-    <script>
-      // Mobile nav toggle
-      const toggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-
-      toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-      });
-
-      // Close mobile nav when a link is clicked
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("open");
-        });
-      });
-
-      // Scroll reveal animation
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-
-      document
-        .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
-    </script>
+    <script src="js/nav.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
